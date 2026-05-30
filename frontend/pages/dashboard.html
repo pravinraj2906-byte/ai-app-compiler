@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>AI App Compiler</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="builder.html">Create Application</a>
+
+        <a href="history.html">History</a>
+
+        <a href="index.html">Logout</a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+
+            <h1 id="welcome">Welcome</h1>
+
+            <p>
+                Build, manage and generate applications using AI
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Projects Created</h2>
+
+            <p id="projectCount">0</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Recent Projects</h2>
+
+            <ul id="historyList">
+
+                <li>No Projects Yet</li>
+
+            </ul>
+
+        </div>
+
+        <button onclick="goBuilder()">
+
+            + Create New Application
+
+        </button>
+
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

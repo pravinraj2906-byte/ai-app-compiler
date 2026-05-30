@@ -1,0 +1,90 @@
+{
+  "ui_schema": {
+    "pages": [
+      {
+        "name": "LoginPage",
+        "components": ["EmailInput", "PasswordInput", "LoginButton"],
+        "allowed_roles": ["Admin", "User", "Guest"]
+      },
+      {
+        "name": "ContactsPage",
+        "components": ["ContactList", "AddContactButton", "SearchBar"],
+        "allowed_roles": ["Admin", "User"]
+      },
+      {
+        "name": "DashboardPage",
+        "components": ["StatsOverview", "RecentActivity", "QuickActions"],
+        "allowed_roles": ["Admin", "User"]
+      },
+      {
+        "name": "PaymentsPage",
+        "components": ["PaymentHistory", "NewPaymentForm", "PaymentMethods"],
+        "allowed_roles": ["Admin"]
+      }
+    ]
+  },
+  "api_schema": {
+    "endpoints": [
+      {
+        "path": "/api/login",
+        "method": "POST",
+        "description": "Authenticate user",
+        "allowed_roles": ["Admin", "User", "Guest"]
+      },
+      {
+        "path": "/api/contacts",
+        "method": "GET",
+        "description": "Get user contacts",
+        "allowed_roles": ["Admin", "User"]
+      },
+      {
+        "path": "/api/payments",
+        "method": "GET",
+        "description": "Get payment history",
+        "allowed_roles": ["Admin"]
+      },
+      {
+        "path": "/api/dashboard",
+        "method": "GET",
+        "description": "Get dashboard data",
+        "allowed_roles": ["Admin", "User"]
+      }
+    ]
+  },
+  "db_schema": {
+    "tables": [
+      {
+        "name": "User",
+        "columns": ["id", "email", "password_hash", "role", "created_at"]
+      },
+      {
+        "name": "Contact",
+        "columns": ["id", "user_id", "name", "email", "phone", "created_at"]
+      },
+      {
+        "name": "Payment",
+        "columns": ["id", "user_id", "amount", "status", "created_at"]
+      },
+      {
+        "name": "Dashboard",
+        "columns": ["id", "user_id", "stats", "last_updated"]
+      }
+    ]
+  },
+  "auth_rules": {
+    "roles": [
+      {
+        "name": "Admin",
+        "permissions": ["read", "write", "delete", "manage_users"]
+      },
+      {
+        "name": "User",
+        "permissions": ["read", "write"]
+      },
+      {
+        "name": "Guest",
+        "permissions": ["read"]
+      }
+    ]
+  }
+}

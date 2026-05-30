@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    min-height:100vh;
+    background:#0f172a;
+    color:white;
+    font-family:Segoe UI, sans-serif;
+}
+
+.sidebar{
+
+    width:250px;
+
+    background:#111827;
+
+    padding:30px;
+}
+
+.sidebar h2{
+
+    margin-bottom:40px;
+}
+
+.sidebar a{
+
+    display:block;
+
+    padding:12px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    margin-bottom:8px;
+}
+
+.sidebar a:hover{
+
+    background:#1e293b;
+}
+
+.main{
+
+    flex:1;
+
+    padding:40px;
+}
+
+.header{
+
+    margin-bottom:30px;
+}
+
+.header p{
+
+    color:#94a3b8;
+
+    margin-top:10px;
+}
+
+.card{
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+}
+
+.card h2{
+
+    margin-bottom:15px;
+}
+
+#projectCount{
+
+    font-size:32px;
+
+    font-weight:bold;
+}
+
+button{
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6366f1;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+button:hover{
+
+    opacity:.9;
+}

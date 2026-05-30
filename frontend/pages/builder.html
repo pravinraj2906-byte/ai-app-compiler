@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI App Builder</title>
+
+    <link rel="stylesheet"
+        href="../css/builder.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 AI App Builder</h1>
+
+    <textarea
+        id="prompt"
+        placeholder="Describe your application..."
+    ></textarea>
+
+    <br><br>
+
+    <button onclick="analyze()">
+        Generate Architecture
+    </button>
+    <button onclick="goArchitecture()">
+        View Architecture
+    </button>
+    <button onclick="generateApp()">
+        Generate Application
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="../js/builder.js"></script>
+
+</body>
+
+</html>
